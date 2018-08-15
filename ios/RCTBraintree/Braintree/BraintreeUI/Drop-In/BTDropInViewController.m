@@ -104,8 +104,9 @@
             [[BTLogger sharedLogger] critical:@"ERROR: Drop-in delegate not set"];
         }
 
-        self.dropInContentView.hidePaymentButton = !self.dropInContentView.paymentButton.hasAvailablePaymentMethod;
-
+        // self.dropInContentView.hidePaymentButton = !self.dropInContentView.paymentButton.hasAvailablePaymentMethod;
+        self.dropInContentView.hidePaymentButton = YES;
+        
         if (![self isAddPaymentMethodDropInViewController]) {
             [self fetchPaymentMethodsOnCompletion:^{}];
         }
