@@ -240,6 +240,7 @@ public class Braintree extends ReactContextBaseJavaModule implements ActivityEve
       .primaryDescription(title)
       .secondaryDescription(description)
       .amount(amount)
+      .disablePayPal()
       .clientToken(this.getToken());
 
     (getCurrentActivity()).startActivityForResult(
